@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% block title %}{% endblock %}
+  </title>
+
+  <link href="{% static 'icons/hm-favicon.ico' %}" rel="icon" type="image/x-icon">
+
+  <script src="{% static 'js/tailwindcss.js'%}"></script>
+</head>
+
+<body class="bg-neutral-100/50">
+  <div class="flex items-center">
+    <div class="mx-auto">
+      <ul class="flex space-x-10 text-xs font-medium items-center">
+        <li><a>Servicio al Cliente</a></li>
+        <li><a>Devoluciones</a></li>
+        <li><a>Encontrar una tienda</a></li>
+      </ul>
+    </div>
+
+    <div class="mx-auto">
+
+      <div class="my-5">
+        <img src="{% static 'image/logo.webp' %}" alt="logo" class="mx-auto w-68 h-68">
+      </div>
+
+      <div>
+        <ul class="flex space-x-7 font-normal items-center">
+          <li><a>Mujer</a></li>
+          <li><a>Hombre</a></li>
+          <li><a>Divided</a></li>
+          <li><a>Bebe</a></li>
+          <li><a>Niños</a></li>
+          <li><a>Sale</a></li>
+          <li><a>Sostenibilidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mx-auto">
+      <ul class="flex text-xs space-x-5 items-center text-center font-medium">
+        <li>
+          <a class="flex space-x-1 items-center">
+            <svg class="w-6 h-6 bg-black"></svg>
+            <span>Iniciar Sesión</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex space-x-1 items-center">
+            <svg class="w-6 h-6 bg-black"></svg>
+            <span>Favoritos</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex space-x-1 items-center">
+            <svg class="w-6 h-6 bg-black"></svg>
+            <span>Carrito de Compras</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>
