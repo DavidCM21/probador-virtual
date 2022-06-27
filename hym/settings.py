@@ -43,7 +43,7 @@ ROOT_URLCONF = 'hym.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:/Proyectos/hym/hym/templates'],
+        'DIRS': [BASE_DIR / 'hym/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
